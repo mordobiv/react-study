@@ -12,13 +12,3 @@ test('renders learn react link', () => {
   const linkElement = getByText(/morty/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-// test('renders learn react link', () => {
-//   const { getByText } = render(
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>
-//   );
-//   const linkElement = getByText(/morty/i);
-//   expect(linkElement).toBeInTheDocument();
-// });

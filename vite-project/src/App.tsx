@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import NotFound from './pages/NotFound';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import NotFound from './pages/notFound/NotFound';
 import Layout from './components/layout/Layout';
 
 export default function App() {

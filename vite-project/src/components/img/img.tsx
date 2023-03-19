@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './tile/tile.module.scss';
+import styles from '../tile/tile.module.scss';
 
 type IImg = {
   src: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../img';
+import Img from '../img/img';
 import styles from './tile.module.scss';
 
 type INode = {
