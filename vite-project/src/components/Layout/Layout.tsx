@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import styles from './layout.module.scss';
 
 export default class Layout extends React.Component {
@@ -7,8 +7,8 @@ export default class Layout extends React.Component {
     return (
       <>
         <header className={styles.header}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
         </header>
         <Outlet />
       </>

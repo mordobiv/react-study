@@ -9,7 +9,6 @@ type IImg = {
 export default class Img extends React.Component<IImg> {
   render() {
     const { src, className } = this.props;
-    console.log(this.props);
     return (
       <div className={styles[className]}>
         <img src={src} alt={`${className}__img`} className={styles[`${className}__img`]} />

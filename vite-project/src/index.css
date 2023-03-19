@@ -13,16 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-/* 
-.header {
-  font-size: 2rem;
-  background-color: #242424;
-  width: 100%;
-  justify-content: center;
-  padding-bottom: 40px;
-  display: flex;
-  justify-content: space-evenly;
-} */
 
 a {
   font-weight: 500;

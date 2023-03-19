@@ -4,10 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import Layout from './components/Layout/Layout';
-// import SearchInput from './components/search-input';
-// import Tile from './components/tile/tile';
-// import data from './assets/data';
+import Layout from './components/layout/Layout';
 
 export default function App() {
   return (
