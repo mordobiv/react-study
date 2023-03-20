@@ -1,15 +1,31 @@
 import React from 'react';
 
-export default class SearchInput extends React.Component {
+type SearchState = {
+  value: string;
+};
+
+export default class SearchInput extends React.Component<object, SearchState> {
+  searchLocalStorageKey = 'searchValue';
+
+  constructor(props: SearchState | Readonly<SearchState>) {
+    super(props);
+    this.state = { value: localStorage.getItem(this.searchLocalStorageKey) || '' };
+  }
+
+  componentWillUnmount(): void {
+    localStorage.setItem(this.searchLocalStorageKey, this.state.value || '');
+  }
+
+  updateSearchValue(e: React.ChangeEvent<HTMLInputElement>) {
+    this.setState({ value: e.target.value });
+  }
+
   render() {
-    const searchLocalStorageKey = 'searchValue';
     return (
       <input
         placeholder="Search..."
-        onChange={(e) => {
-          localStorage.setItem(searchLocalStorageKey, e.target.value || '');
-        }}
-        defaultValue={localStorage.getItem(searchLocalStorageKey) || ''}
+        onChange={(e) => this.updateSearchValue(e)}
+        defaultValue={this.state.value}
       />
     );
   }
