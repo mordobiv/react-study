@@ -2,7 +2,7 @@ import React from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
 
-type INode = {
+type Node = {
   node: {
     id: number;
     name: string;
@@ -14,7 +14,7 @@ type INode = {
   };
 };
 
-export default class Tile extends React.Component<INode> {
+export default class Tile extends React.Component<Node> {
   render() {
     const node = this.props.node;
     const mainIconPath = '/src/assets/img/';
