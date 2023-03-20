@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from '../tile/tile.module.scss';
 
-type IImg = {
+type ImgType = {
   src: string;
   className: string;
 };
 
-export default class Img extends React.Component<IImg> {
+export default class Img extends React.Component<ImgType> {
   render() {
     const { src, className } = this.props;
     return (
