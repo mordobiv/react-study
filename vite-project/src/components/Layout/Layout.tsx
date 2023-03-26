@@ -9,6 +9,7 @@ export default class Layout extends React.Component {
         <header className={styles.header}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
+          <NavLink to="/custom">Add Card</NavLink>
         </header>
         <Outlet />
       </>

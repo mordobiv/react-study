@@ -1,18 +1,7 @@
 import React from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
-
-type NodeType = {
-  node: {
-    id: number;
-    name: string;
-    image: string;
-    status: string;
-    created: string;
-    gender: string;
-    species: string;
-  };
-};
+import NodeType from '../../types/node';
 
 export default class Tile extends React.Component<NodeType> {
   render() {
