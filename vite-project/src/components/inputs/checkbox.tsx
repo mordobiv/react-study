@@ -1,7 +1,13 @@
 import React from 'react';
+import inputType from '../../types/input';
 
-export default class Checkbox extends React.Component {
+export default class Checkbox extends React.Component<inputType> {
   render() {
-    return <input type="checkbox" />;
+    return (
+      <>
+        <label>{this.props.label}: </label>
+        <input type="checkbox" ref={this.props.refValue} />
+      </>
+    );
   }
 }

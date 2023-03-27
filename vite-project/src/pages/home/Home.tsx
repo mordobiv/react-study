@@ -11,7 +11,7 @@ export default class Home extends React.Component {
     return (
       <div className="App">
         <SearchInput />
-        <TilesList nodes={this.nodes}></TilesList>
+        <TilesList nodes={this.nodes} />
         {/* <div className="tiles">
           {this.nodes.map((node) => (
             <Tile key={node.id} node={node} />
