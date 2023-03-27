@@ -5,7 +5,7 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Custom from './pages/custom/Custom';
 import NotFound from './pages/notFound/NotFound';
-import Layout from './components/layout/Layout';
+import Layout from './components/Layout/Layout';
 
 export default function App() {
   return (
