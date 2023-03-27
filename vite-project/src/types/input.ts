@@ -1,7 +1,9 @@
+import React from 'react';
+
 type inputType = {
   label: string;
-  refValue: string;
-  isError: boolean;
+  refValue: React.RefObject<HTMLInputElement>;
+  isError?: boolean;
 };
 
 export default inputType;

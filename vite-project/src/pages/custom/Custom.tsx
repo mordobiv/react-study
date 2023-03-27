@@ -3,10 +3,10 @@ import AddForm from '../../components/add-card-form/Form';
 import TilesList from '../../components/tiles-list/tiles-list';
 import NodeType from '../../types/node';
 
-export default class Custom extends React.Component {
-  resData = [];
+export default class Custom extends React.Component<object, { nodes: NodeType[] }> {
+  resData: NodeType[] = [];
 
-  constructor(props) {
+  constructor(props: object | Readonly<object>) {
     super(props);
     this.state = { nodes: [] };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);

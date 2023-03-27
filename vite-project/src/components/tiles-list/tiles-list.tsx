@@ -2,7 +2,7 @@ import React from 'react';
 import Tile from '../tile/tile';
 import NodeType from '../../types/node';
 
-export default class TilesList extends React.Component<NodeType[]> {
+export default class TilesList extends React.Component<{ nodes: NodeType[] }> {
   render() {
     return (
       <div className="tiles">

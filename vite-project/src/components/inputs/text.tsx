@@ -1,14 +1,15 @@
 import React from 'react';
 import inputType from '../../types/input';
+import ValidationError from '../validation-error/validation-error';
 
 export default class Text extends React.Component<inputType> {
   render() {
     return (
-      <>
-        <label>{this.props.label}:</label>
+      <div className="form__field">
+        <label className="form__label">{this.props.label}:</label>
         <input type="text" ref={this.props.refValue} />
-        {this.props.isError && <p>Error</p>}
-      </>
+        {this.props.isError && <ValidationError message="Specify a name" />}
+      </div>
     );
   }
 }

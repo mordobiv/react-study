@@ -5,12 +5,23 @@ import Option from '../inputs/select';
 import Radio from '../inputs/radio';
 import DatePicker from '../inputs/date';
 import File from '../inputs/file';
+import NodeType from '../../types/node';
 
-export default class AddForm extends React.Component {
+export default class AddForm extends React.Component<
+  { onFormSubmit: (data: NodeType) => void } | object,
+  { errors: { text: boolean; species: boolean; gender: boolean; date: boolean; file: boolean } }
+> {
+  name: React.RefObject<HTMLInputElement>;
+  isAlive: React.RefObject<HTMLInputElement>;
+  species: React.RefObject<HTMLInputElement>;
+  gender: React.RefObject<HTMLInputElement>;
+  date: React.RefObject<HTMLInputElement>;
+  file: React.RefObject<HTMLInputElement>;
+
   cardId = 0;
   isFormValid = true;
 
-  constructor(props) {
+  constructor(props: object | Readonly<object>) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.name = React.createRef();
@@ -31,34 +42,36 @@ export default class AddForm extends React.Component {
     };
   }
 
-  handleSubmit(e: SubmitEvent) {
+  handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const name = this.name.current.value;
+    const name = this.name.current ? this.name.current.value : '';
     this.proceedError('text', name.length < 3);
 
-    const status = this.isAlive.current.checked ? 'Alive' : 'Dead';
+    const status = this.isAlive.current ? (this.isAlive.current.checked ? 'Alive' : 'Dead') : '';
 
-    const species = this.species.current.value.toUpperCase();
+    const species = this.species.current ? this.species.current.value.toUpperCase() : '';
     this.proceedError('species', !species);
 
-    const genderSelections = this.gender.current.childNodes;
+    const genderSelections = this.gender.current ? this.gender.current.childNodes : '';
     let finalGender = '';
-    for (let gender of genderSelections) {
-      if (gender.checked) {
-        finalGender = gender.value.toUpperCase();
-        break;
+    if (genderSelections) {
+      for (const gender of genderSelections) {
+        if ((gender as HTMLInputElement).checked) {
+          finalGender = (gender as HTMLInputElement).value.toUpperCase();
+          break;
+        }
       }
     }
     this.proceedError('gender', !finalGender);
 
-    const date = this.date.current.value;
+    const date = this.date.current ? this.date.current.value : '';
     this.proceedError('date', !date);
 
     const image = this.file.current;
-    this.proceedError('file', !image.value);
+    this.proceedError('file', !(image || { value: false }).value);
 
-    if (this.isFormValid) {
+    if (this.isFormValid && image && image.files) {
       const data = {
         id: this.cardId++,
         name,
@@ -66,13 +79,29 @@ export default class AddForm extends React.Component {
         species,
         image: URL.createObjectURL(image.files[0]),
         created: date,
-        // created: '2017-11-04T18:48:46.250Z',
         gender: finalGender,
       };
       this.props.onFormSubmit(data);
+      this.resetForm();
     } else console.log('----------------');
     // } else alert('nope');
     this.isFormValid = true;
+  }
+
+  resetForm() {
+    if (this.name.current) this.name.current.value = '';
+    if (this.isAlive.current) this.isAlive.current.checked = false;
+    if (this.species.current) this.species.current.value = '';
+    if (this.date.current) this.date.current.value = '';
+    if (this.file.current) this.file.current.value = '';
+    const genderSelections = this.gender.current ? this.gender.current.childNodes : '';
+    if (genderSelections) {
+      for (const gender of genderSelections) {
+        if ((gender as HTMLInputElement).checked) {
+          (gender as HTMLInputElement).checked = false;
+        }
+      }
+    }
   }
 
   proceedError(key: string, isError: boolean) {
@@ -82,8 +111,7 @@ export default class AddForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        {/* Name: <input type="text" ref={this.name} /> */}
+      <form onSubmit={this.handleSubmit} className="form-add">
         <Text label="Name" refValue={this.name} isError={this.state.errors.text} />
         <Checkbox label="Is alive?" refValue={this.isAlive} />
         <Option label="Specie" refValue={this.species} isError={this.state.errors.species} />

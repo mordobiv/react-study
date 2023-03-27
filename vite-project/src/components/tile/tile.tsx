@@ -3,7 +3,7 @@ import Img from '../img/img';
 import styles from './tile.module.scss';
 import NodeType from '../../types/node';
 
-export default class Tile extends React.Component<NodeType> {
+export default class Tile extends React.Component<{ node: NodeType }> {
   render() {
     const node = this.props.node;
     const mainIconPath = '/src/assets/img/';
