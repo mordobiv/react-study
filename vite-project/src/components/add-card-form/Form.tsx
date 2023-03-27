@@ -8,12 +8,12 @@ import File from '../inputs/file';
 import NodeType from '../../types/node';
 
 export default class AddForm extends React.Component<
-  { onFormSubmit: (data: NodeType) => void } | object,
+  { onFormSubmit: (data: NodeType) => void },
   { errors: { text: boolean; species: boolean; gender: boolean; date: boolean; file: boolean } }
 > {
   name: React.RefObject<HTMLInputElement>;
   isAlive: React.RefObject<HTMLInputElement>;
-  species: React.RefObject<HTMLInputElement>;
+  species: React.RefObject<HTMLSelectElement>;
   gender: React.RefObject<HTMLInputElement>;
   date: React.RefObject<HTMLInputElement>;
   file: React.RefObject<HTMLInputElement>;
@@ -21,7 +21,7 @@ export default class AddForm extends React.Component<
   cardId = 0;
   isFormValid = true;
 
-  constructor(props: object | Readonly<object>) {
+  constructor(props: { onFormSubmit: (data: NodeType) => void }) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.name = React.createRef();
@@ -83,8 +83,8 @@ export default class AddForm extends React.Component<
       };
       this.props.onFormSubmit(data);
       this.resetForm();
-    } else console.log('----------------');
-    // } else alert('nope');
+      alert('Success, all the data has been saved!');
+    }
     this.isFormValid = true;
   }
 

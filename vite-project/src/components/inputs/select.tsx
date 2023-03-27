@@ -1,8 +1,8 @@
 import React from 'react';
-import inputType from '../../types/input';
+import { selectType } from '../../types/input';
 import ValidationError from '../validation-error/validation-error';
 
-export default class Select extends React.Component<inputType> {
+export default class Select extends React.Component<selectType> {
   render() {
     return (
       <div className="form__field">

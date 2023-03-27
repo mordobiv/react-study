@@ -6,4 +6,10 @@ type inputType = {
   isError?: boolean;
 };
 
+export type selectType = {
+  label: string;
+  refValue: React.RefObject<HTMLSelectElement>;
+  isError?: boolean;
+};
+
 export default inputType;
