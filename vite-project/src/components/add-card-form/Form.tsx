@@ -6,10 +6,11 @@ import Radio from '../inputs/radio';
 import DatePicker from '../inputs/date';
 import File from '../inputs/file';
 import NodeType from '../../types/node';
+import ErrorType from '../../types/validation-error';
 
 export default class AddForm extends React.Component<
   { onFormSubmit: (data: NodeType) => void },
-  { errors: { text: boolean; species: boolean; gender: boolean; date: boolean; file: boolean } }
+  ErrorType
 > {
   name: React.RefObject<HTMLInputElement>;
   isAlive: React.RefObject<HTMLInputElement>;
