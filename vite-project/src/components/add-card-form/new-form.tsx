@@ -1,49 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ValidationError from '../validation-error/validation-error';
-import Text from '../inputs/text';
+import NodeType from '../../types/node';
 
-// interface IFormInput {
-//   firstName: string;
-//   lastName: string;
-//   age: number;
-// }
-
-// export default function NewForm() {
-//   const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
-//   const onSubmit: SubmitHandler<IFormInput> = data => console.log(data);
-
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       <input {...register("Name", { required: true })} />
-//       {errors.name && errors.name.type === "required" && <span>This is required</span>}
-//       <input type="submit" />
-//     </form>
-//   );
-// }
-
-export default function App(formSubmit: any) {
+export default function App(formSubmit: { onFormSubmit: (data: NodeType) => void }) {
+  const [id, useId] = useState(0);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    data.id = 1;
+  const OnSubmit = (data: NodeType) => {
+    data.id = id;
+    useId(id + 1);
     data.status = data.status ? 'alive' : 'dead';
-    data.image = URL.createObjectURL(data.image[0]);
+    data.image = URL.createObjectURL(data.image[0] as unknown as Blob);
     console.log(data);
     formSubmit.onFormSubmit(data);
+    reset();
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="form-add">
+    <form onSubmit={handleSubmit(OnSubmit)} className="form-add">
       <div className="form__field">
         <label className="form__label">Name:</label>
         <input {...register('name', { required: true, minLength: 3 })} />
         {errors.name && (errors.name.type === 'required' || errors.name.type === 'minLength') && (
-          <ValidationError message={'wtf'} />
+          <ValidationError message={'Specify a name'} />
         )}
       </div>
       <div className="form__field">
@@ -60,7 +45,9 @@ export default function App(formSubmit: any) {
           <option value="alien">Alien</option>
           <option value="robot">Robot</option>
         </select>
-        {errors.species && errors.species.type === 'required' && <ValidationError message={'wtf'} />}
+        {errors.species && errors.species.type === 'required' && (
+          <ValidationError message={'Select a specie'} />
+        )}
       </div>
       <div className="form__field">
         <label className="form__label">Gender: </label>
@@ -82,17 +69,23 @@ export default function App(formSubmit: any) {
             value="female"
           />
         </span>
-        {errors.gender && errors.gender.type === 'required' && <ValidationError message={'wtf'} />}
+        {errors.gender && errors.gender.type === 'required' && (
+          <ValidationError message={'Specify gender'} />
+        )}
       </div>
       <div className="form__field">
         <label className="form__label">Edition date: </label>
         <input {...register('created', { required: true })} type="date" />
-        {errors.created && errors.created.type === 'required' && <ValidationError message={'wtf'} />}
+        {errors.created && errors.created.type === 'required' && (
+          <ValidationError message={'Select created date'} />
+        )}
       </div>
       <div className="form__field">
         <label className="form__label">Select an image:</label>
         <input {...register('image', { required: true })} type="file" accept="image/*" />
-        {errors.image && errors.image.type === 'required' && <ValidationError message={'wtf'} />}
+        {errors.image && errors.image.type === 'required' && (
+          <ValidationError message={'Upload image'} />
+        )}
       </div>
       <input type="submit" />
     </form>
