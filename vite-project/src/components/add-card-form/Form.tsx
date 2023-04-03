@@ -12,7 +12,7 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
     formState: { errors },
   } = useForm();
 
-  const OnSubmit = (data: NodeType) => {
+  function OnSubmit(data: NodeType) {
     data.id = id;
     useId(id + 1);
     data.status = data.status ? 'alive' : 'dead';
@@ -20,10 +20,10 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
     console.log(data);
     formSubmit.onFormSubmit(data);
     reset();
-  };
+  }
 
   return (
-    <form onSubmit={handleSubmit(OnSubmit)} className="form-add">
+    <form onSubmit={handleSubmit(() => OnSubmit)} className="form-add">
       <div className="form__field">
         <label className="form__label">Name:</label>
         <input {...register('name', { required: true, minLength: 3 })} />
