@@ -17,7 +17,6 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
     useId(id + 1);
     data.status = data.status ? 'alive' : 'dead';
     data.image = URL.createObjectURL(data.image[0] as unknown as Blob);
-    console.log(data);
     formSubmit.onFormSubmit(data);
     reset();
   }

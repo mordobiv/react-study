@@ -7,7 +7,6 @@ export default function SearchInput() {
   useEffect(() => {
     return () => {
       localStorage.setItem(searchLocalStorageKey, value || '');
-      console.log(2, value);
     };
   });
 
