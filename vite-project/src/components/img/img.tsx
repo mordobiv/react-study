@@ -6,13 +6,11 @@ type ImgType = {
   className: string;
 };
 
-export default class Img extends React.Component<ImgType> {
-  render() {
-    const { src, className } = this.props;
-    return (
-      <div className={styles[className]}>
-        <img src={src} alt={`${className}__img`} className={styles[`${className}__img`]} />
-      </div>
-    );
-  }
+export default function Img(props: ImgType) {
+  const { src, className } = props;
+  return (
+    <div className={styles[className]}>
+      <img src={src} alt={`${className}__img`} className={styles[`${className}__img`]} />
+    </div>
+  );
 }

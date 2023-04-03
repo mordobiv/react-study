@@ -1,5 +1,6 @@
 import React from 'react';
 import AddForm from '../../components/add-card-form/Form';
+import NewForm from '../../components/add-card-form/new-form';
 import TilesList from '../../components/tiles-list/tiles-list';
 import NodeType from '../../types/node';
 
@@ -20,7 +21,8 @@ export default class Custom extends React.Component<object, { nodes: NodeType[] 
   render() {
     return (
       <>
-        <AddForm onFormSubmit={this.handleFormSubmit} />
+        <NewForm onFormSubmit={this.handleFormSubmit} />
+        {/* <AddForm onFormSubmit={this.handleFormSubmit} /> */}
         <TilesList nodes={this.state.nodes} />
       </>
     );
