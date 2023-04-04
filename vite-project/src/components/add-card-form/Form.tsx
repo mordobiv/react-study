@@ -22,7 +22,7 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
   }
 
   return (
-    <form onSubmit={handleSubmit(() => OnSubmit)} className="form-add">
+    <form onSubmit={handleSubmit(OnSubmit)} className="form-add">
       <div className="form__field">
         <label className="form__label">Name:</label>
         <input {...register('name', { required: true, minLength: 3 })} />
