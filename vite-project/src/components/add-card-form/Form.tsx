@@ -18,6 +18,7 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
     data.status = data.status ? 'alive' : 'dead';
     data.image = URL.createObjectURL(data.image[0] as unknown as Blob);
     formSubmit.onFormSubmit(data);
+    alert('Success, all data is saved!');
     reset();
   }
 
