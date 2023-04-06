@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import SearchInput from '../../components/search-input/search-input';
 import TilesList from '../../components/tiles-list/tiles-list';
+import Spinner from '../../components/loading-spinner/index';
+import ErrorMessage from '../../components/error/index';
 import apiUrl from '../../configuration';
 import NodeType from '../../types/node';
 import apiResponseType from '../../types/api-response';
@@ -49,8 +51,8 @@ export default function Home() {
   return (
     <div className="App">
       <SearchInput handleSearchFilter={handleSearchFilter} />
-      {error && <div>{error} </div>}
-      {isPending && <div>Loading...</div>}
+      {error && <ErrorMessage message={error} />}
+      {isPending && <Spinner />}
       {nodes && <TilesList nodes={nodes} />}
     </div>
   );
