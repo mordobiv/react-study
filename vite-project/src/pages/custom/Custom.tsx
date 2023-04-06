@@ -4,10 +4,10 @@ import TilesList from '../../components/tiles-list/tiles-list';
 import NodeType from '../../types/node';
 
 export default function Custom() {
-  const [nodesList, useNodes] = useState<NodeType[]>([]);
+  const [nodesList, setNodes] = useState<NodeType[]>([]);
 
   function HandleFormSubmit(data: NodeType) {
-    useNodes((nodesList) => [...nodesList, data]);
+    setNodes((nodesList) => [...nodesList, data]);
   }
 
   return (

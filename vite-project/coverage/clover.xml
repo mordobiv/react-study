@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680535138459" clover="3.2.0">
-  <project timestamp="1680535138459" name="All files">
-    <metrics statements="39" coveredstatements="29" conditionals="22" coveredconditionals="9" methods="21" coveredmethods="16" elements="82" coveredelements="54" complexity="0" loc="39" ncloc="39" packages="14" files="17" classes="17"/>
+<coverage generated="1680777404824" clover="3.2.0">
+  <project timestamp="1680777404824" name="All files">
+    <metrics statements="72" coveredstatements="31" conditionals="42" coveredconditionals="14" methods="28" coveredmethods="15" elements="142" coveredelements="60" complexity="0" loc="72" ncloc="72" packages="14" files="19" classes="19"/>
     <package name="src">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/App.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="configuration.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/configuration.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
       </file>
       <file name="main.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/main.tsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -14,16 +18,16 @@
       </file>
     </package>
     <package name="src.assets">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="data.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/assets/data.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.add-card-form">
-      <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="3" coveredmethods="1"/>
+      <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="2" coveredmethods="1"/>
       <file name="Form.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/add-card-form/Form.tsx">
-        <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="3" coveredmethods="1"/>
+        <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="2" coveredmethods="1"/>
         <line num="7" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -32,16 +36,16 @@
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.img">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="img.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/img/img.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="10" count="77" type="stmt"/>
-        <line num="11" count="77" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.components.layout">
@@ -52,35 +56,44 @@
       </file>
     </package>
     <package name="src.components.search-input">
-      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <metrics statements="16" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="4"/>
       <file name="search-input.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/search-input/search-input.tsx">
-        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="6" type="stmt"/>
+        <metrics statements="16" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="4"/>
         <line num="8" count="6" type="stmt"/>
         <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.tile">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="tile.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/tile/tile.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="25" type="stmt"/>
-        <line num="8" count="25" type="stmt"/>
-        <line num="10" count="25" type="stmt"/>
-        <line num="11" count="25" type="stmt"/>
-        <line num="18" count="25" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.tiles-list">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="tiles-list.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/tiles-list/tiles-list.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="9" count="24" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.validation-error">
@@ -107,12 +120,35 @@
       </file>
     </package>
     <package name="src.pages.home">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="26" coveredstatements="6" conditionals="16" coveredconditionals="5" methods="6" coveredmethods="2"/>
       <file name="Home.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/pages/home/Home.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="8" count="3" type="stmt"/>
+        <metrics statements="26" coveredstatements="6" conditionals="16" coveredconditionals="5" methods="6" coveredmethods="2"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.notFound">
@@ -124,6 +160,9 @@
     </package>
     <package name="src.types">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="api-response.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/api-response.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
       <file name="input.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/input.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
