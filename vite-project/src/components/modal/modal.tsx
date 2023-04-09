@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react';
 import ReactPortal from '../../components/portal/ReactPortal';
 import CardItem from '../card-item/index';
-// import data from '../../assets/data';
 import Img from '../../components/img/img';
 import styles from './modal.module.scss';
+import NodeType from '../../types/node';
 
-function Modal({ children, isOpen, handleClose, data }) {
+function Modal({
+  isOpen,
+  handleClose,
+  data,
+}: {
+  isOpen: boolean;
+  handleClose: () => void;
+  data: NodeType;
+}) {
   useEffect(() => {
-    const closeOnEscapeKey = (e) => (e.key === 'Escape' ? handleClose() : null);
+    const closeOnEscapeKey = (e: KeyboardEvent) => (e.key === 'Escape' ? handleClose() : null);
 
     document.body.addEventListener('keydown', closeOnEscapeKey);
     return () => {
@@ -26,8 +34,8 @@ function Modal({ children, isOpen, handleClose, data }) {
           <CardItem label={'species'} data={data.species} />
           <CardItem label={'type'} data={data.type} />
           <CardItem label={'gender'} data={data.gender} />
-          <CardItem label={'origin'} data={data.origin.name} />
-          <CardItem label={'location'} data={data.location.name} />
+          {data.origin && <CardItem label={'origin'} data={data.origin.name} />}
+          {data.location && <CardItem label={'location'} data={data.location.name} />}
           <CardItem label={'url'} data={data.url} />
           <CardItem label={'created'} data={data.created} />
           <CardItem label={'episodes'} data={data.episode.length} />

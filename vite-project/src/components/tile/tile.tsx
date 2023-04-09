@@ -35,9 +35,7 @@ export default function Tile(props: { node: NodeType }) {
         <p className={styles.info__species}>{node.species}</p>
         <p className={styles.info__date}>{dateDay}</p>
       </div>
-      <Modal handleClose={() => setIsModalOpen(false)} isOpen={isModalOpen} data={node}>
-        This is Modal Content!
-      </Modal>
+      <Modal handleClose={() => setIsModalOpen(false)} isOpen={isModalOpen} data={node} />
     </div>
   );
 }
