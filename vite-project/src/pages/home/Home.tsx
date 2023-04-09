@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchInput from '../../components/search-input/search-input';
 import TilesList from '../../components/tiles-list/tiles-list';
 import Spinner from '../../components/loading-spinner/index';
+import Modal from '../../components/modal/modal';
 import ErrorMessage from '../../components/error/index';
 import apiUrl from '../../configuration';
 import NodeType from '../../types/node';
@@ -11,6 +12,7 @@ export default function Home() {
   const [nodes, setNodes] = useState<NodeType[]>([]);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${apiUrl}/character/`)
@@ -50,6 +52,11 @@ export default function Home() {
 
   return (
     <div className="App">
+      {/* <button onClick={() => setIsModalOpen(true)}>Click to Open Modal</button> */}
+      <Modal handleClose={() => setIsModalOpen(false)} isOpen={isModalOpen}>
+        This is Modal Content!
+      </Modal>
+
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {error && <ErrorMessage message={error} />}
       {isPending && <Spinner />}

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
 import NodeType from '../../types/node';
+import Modal from '../../components/modal/modal';
 
 export default function Tile(props: { node: NodeType }) {
   const node = props.node;
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const mainIconPath = '/src/assets/img/';
 
   const date = new Date(node.created);
@@ -16,7 +18,7 @@ export default function Tile(props: { node: NodeType }) {
     ${date.getFullYear()}`;
 
   return (
-    <div key={node.id} className={styles.tile}>
+    <div key={node.id} className={styles.tile} onClick={() => setIsModalOpen(true)}>
       <p className={styles.tile__name}>{node.name}</p>
       <div className={styles.images}>
         <Img
@@ -33,6 +35,9 @@ export default function Tile(props: { node: NodeType }) {
         <p className={styles.info__species}>{node.species}</p>
         <p className={styles.info__date}>{dateDay}</p>
       </div>
+      <Modal handleClose={() => setIsModalOpen(false)} isOpen={isModalOpen} data={node}>
+        This is Modal Content!
+      </Modal>
     </div>
   );
 }
