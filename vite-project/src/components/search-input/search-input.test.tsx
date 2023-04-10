@@ -9,7 +9,7 @@ describe('Seach', () => {
   });
 
   it('stores value', async () => {
-    render(<SearchInput />);
+    render(<SearchInput handleSearchFilter={() => 1} />);
     fireEvent.change(screen.getByPlaceholderText(/search/i), { target: { value: 'test string' } });
     expect(screen.getByRole('textbox')).toHaveValue('test string');
   });

@@ -8,7 +8,4 @@ describe('Home', () => {
     expect(screen.getByPlaceholderText(/search/i)).toBeInTheDocument();
   });
 
-  it('apllying filter', () => {
-    Home.handleSearchFilter();
-  });
 });
