@@ -17,7 +17,6 @@ export default function SearchInput(props: {
   function handleKeyDown(event: { key: string }) {
     if (event.key === 'Enter') {
       props.handleSearchFilter({ status: 'loading' });
-      // setTimeout(() => {
       fetch(`${apiUrl}/character/?name=${value}`)
         .then((res) => {
           console.log(res);
@@ -35,7 +34,6 @@ export default function SearchInput(props: {
             errorMessage: err.message,
           });
         });
-      // }, 999999999);
     }
   }
 

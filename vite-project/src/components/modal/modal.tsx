@@ -5,28 +5,9 @@ import Img from '../../components/img/img';
 import styles from './modal.module.scss';
 import NodeType from '../../types/node';
 
-function Modal({
-  isOpen,
-  handleClose,
-  data,
-}: {
-  isOpen: boolean;
-  handleClose: () => void;
-  data: NodeType;
-}) {
-  useEffect(() => {
-    const closeOnEscapeKey = (e: KeyboardEvent) => (e.key === 'Escape' ? handleClose() : null);
-
-    document.body.addEventListener('keydown', closeOnEscapeKey);
-    return () => {
-      document.body.removeEventListener('keydown', closeOnEscapeKey);
-    };
-  }, [handleClose]);
-
-  if (!isOpen) return null;
-
+function Modal({ handleClose, data }: { handleClose: () => void; data: NodeType }) {
   return (
-    <ReactPortal wrapperId={styles['react-portal-modal-container']} onClick={handleClose}>
+    <div className={styles['modal-container']} onClick={handleClose}>
       <div className={styles.modal}>
         <div className={styles.text}>
           <CardItem label={'name'} data={data.name} />
@@ -42,7 +23,7 @@ function Modal({
         </div>
         <Img src={data.image} className={'images_photo'} />
       </div>
-    </ReactPortal>
+    </div>
   );
 }
 
