@@ -7,5 +7,4 @@ describe('Home', () => {
     render(<Home />);
     expect(screen.getByPlaceholderText(/search/i)).toBeInTheDocument();
   });
-
 });
