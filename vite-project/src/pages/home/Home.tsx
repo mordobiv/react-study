@@ -60,7 +60,6 @@ export default function Home() {
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {error && <ErrorMessage message={error} />}
       {isPending && <Spinner />}
-      {/* {nodes && nodes.length && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />} */}
       {nodes && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />}
       {isModalOpen && <Modal handleClose={() => setIsModalOpen(null)} data={isModalOpen} />}
     </div>

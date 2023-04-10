@@ -4,7 +4,7 @@ import SearchInput from './search-input';
 
 describe('Seach', () => {
   it('renders search', () => {
-    render(<SearchInput />);
+    render(<SearchInput handleSearchFilter={() => 1} />);
     expect(screen.getByPlaceholderText(/search/i)).toBeInTheDocument();
   });
 
