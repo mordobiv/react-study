@@ -9,6 +9,6 @@ test('renders tile', () => {
       <App />
     </BrowserRouter>
   );
-  const linkElement = getByText(/morty/i);
+  const linkElement = getByText(/home/i);
   expect(linkElement).toBeInTheDocument();
 });
