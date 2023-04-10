@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681120037885" clover="3.2.0">
-  <project timestamp="1681120037885" name="All files">
-    <metrics statements="79" coveredstatements="36" conditionals="52" coveredconditionals="16" methods="34" coveredmethods="16" elements="165" coveredelements="68" complexity="0" loc="79" ncloc="79" packages="17" files="22" classes="22"/>
+<coverage generated="1681121715068" clover="3.2.0">
+  <project timestamp="1681121715068" name="All files">
+    <metrics statements="79" coveredstatements="40" conditionals="56" coveredconditionals="25" methods="34" coveredmethods="20" elements="169" coveredelements="85" complexity="0" loc="79" ncloc="79" packages="17" files="22" classes="22"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/App.tsx">
@@ -41,25 +41,25 @@
       </file>
     </package>
     <package name="src.components.card-item">
-      <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/card-item/index.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.components.error">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/error/index.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.img">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="img.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/img/img.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.components.loading-spinner">
@@ -70,10 +70,10 @@
       </file>
     </package>
     <package name="src.components.modal">
-      <metrics statements="1" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <file name="modal.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/modal/modal.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.search-input">
@@ -118,10 +118,10 @@
       </file>
     </package>
     <package name="src.components.validation-error">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="validation-error.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/validation-error/validation-error.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.about">
