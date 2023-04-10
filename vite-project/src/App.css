@@ -1,0 +1,47 @@
+#root {
+  max-width: 80%;
+  width: 100%;;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-size: 10px;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about {
+  font-size: 3rem;
+}
+
+.error {
+  font-size: 3rem;
+  color: red;
+}
+.active {
+  color: aqua;
+}
+
+.form-add {
+  font-size: 1.4rem;
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+  text-align: left;
+  padding: 4%;
+}
+
+.form_error {
+  color: red;
+  position: absolute;
+}
+
+.form__field {
+  margin: 2% 2% 4%;
+}
+
+.form__label {
+  margin-right: 2%;
+}
