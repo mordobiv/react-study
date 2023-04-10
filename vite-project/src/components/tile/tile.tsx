@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
 import NodeType from '../../types/node';
-import Modal from '../../components/modal/modal';
 
-export default function Tile(props: { node: NodeType; setIsModalOpen: any }) {
+export default function Tile(props: { node: NodeType; setIsModalOpen: (node: NodeType) => void }) {
   const { node, setIsModalOpen } = props;
   const mainIconPath = '/src/assets/img/';
 

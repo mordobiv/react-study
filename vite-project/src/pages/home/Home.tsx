@@ -22,7 +22,6 @@ export default function Home() {
 
       fetch(`${apiUrl}/character/`)
         .then((res) => {
-          console.log(res);
           if (!res.ok) {
             throw Error('Could not fetch the data');
           }
@@ -61,7 +60,8 @@ export default function Home() {
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {error && <ErrorMessage message={error} />}
       {isPending && <Spinner />}
-      {nodes.length && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />}
+      {/* {nodes && nodes.length && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />} */}
+      {nodes && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />}
       {isModalOpen && <Modal handleClose={() => setIsModalOpen(null)} data={isModalOpen} />}
     </div>
   );

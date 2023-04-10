@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import ReactPortal from '../../components/portal/ReactPortal';
+import React from 'react';
 import CardItem from '../card-item/index';
 import Img from '../../components/img/img';
 import styles from './modal.module.scss';

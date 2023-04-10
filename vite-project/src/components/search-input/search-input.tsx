@@ -19,7 +19,6 @@ export default function SearchInput(props: {
       props.handleSearchFilter({ status: 'loading' });
       fetch(`${apiUrl}/character/?name=${value}`)
         .then((res) => {
-          console.log(res);
           if (!res.ok) {
             throw Error('No corresponding characters found.');
           }
