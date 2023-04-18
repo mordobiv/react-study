@@ -2,9 +2,11 @@ import React from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
 import NodeType from '../../types/node';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../../store/search';
 
-export default function Tile(props: { node: NodeType; setIsModalOpen: (node: NodeType) => void }) {
-  const { node, setIsModalOpen } = props;
+export default function Tile({ node }: { node: NodeType }) {
+  const dispatch = useDispatch();
   const mainIconPath = '/src/assets/img/';
 
   const date = new Date(node.created);
@@ -16,7 +18,7 @@ export default function Tile(props: { node: NodeType; setIsModalOpen: (node: Nod
     ${date.getFullYear()}`;
 
   return (
-    <div key={node.id} className={styles.tile} onClick={() => setIsModalOpen(node)}>
+    <div key={node.id} className={styles.tile} onClick={() => dispatch(openModal(node))}>
       <p className={styles.tile__name}>{node.name}</p>
       <div className={styles.images}>
         <Img

@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ValidationError from '../validation-error/validation-error';
 import NodeType from '../../types/node';
+import { useDispatch } from 'react-redux';
+import { add } from '../../store/forms';
 
-export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => void }) {
+export default function AddForm() {
   const [id, useId] = useState(0);
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -17,7 +21,7 @@ export default function AddForm(formSubmit: { onFormSubmit: (data: NodeType) => 
     useId(id + 1);
     data.status = data.status ? 'alive' : 'dead';
     data.image = URL.createObjectURL(data.image[0] as unknown as Blob);
-    formSubmit.onFormSubmit(data);
+    dispatch(add(data));
     alert('Success, all data is saved!');
     reset();
   }

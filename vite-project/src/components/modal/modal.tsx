@@ -3,10 +3,13 @@ import CardItem from '../card-item/index';
 import Img from '../../components/img/img';
 import styles from './modal.module.scss';
 import NodeType from '../../types/node';
+import { useDispatch } from 'react-redux';
+import { closeModal } from '../../store/search';
 
-function Modal({ handleClose, data }: { handleClose: () => void; data: NodeType }) {
+function Modal({ data }: { data: NodeType }) {
+  const dispatch = useDispatch();
   return (
-    <div className={styles['modal-container']} onClick={handleClose}>
+    <div className={styles['modal-container']} onClick={() => dispatch(closeModal())}>
       <div className={styles.modal}>
         <div className={styles.text}>
           <CardItem label={'name'} data={data.name} />

@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AddForm from '../../components/add-card-form/Form';
 import TilesList from '../../components/tiles-list/tiles-list';
-import NodeType from '../../types/node';
+import { useSelector } from 'react-redux';
 
 export default function Custom() {
-  const [nodesList, setNodes] = useState<NodeType[]>([]);
-
-  function HandleFormSubmit(data: NodeType) {
-    setNodes((nodesList) => [...nodesList, data]);
-  }
+  const nodesList = useSelector((state) => state.formReducer.cards);
+  console.log(nodesList);
 
   return (
     <>
-      <AddForm onFormSubmit={HandleFormSubmit} />
+      <AddForm />
       <TilesList nodes={nodesList} />
     </>
   );

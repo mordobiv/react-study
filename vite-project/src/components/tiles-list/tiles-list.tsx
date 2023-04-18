@@ -9,7 +9,7 @@ export default function TilesList(props: {
   return (
     <div className="tiles">
       {props.nodes.map((node: NodeType) => (
-        <Tile setIsModalOpen={props.setIsModalOpen} key={node.id} node={node} />
+        <Tile key={node.id} node={node} />
       ))}
     </div>
   );

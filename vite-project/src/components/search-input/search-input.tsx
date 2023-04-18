@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import apiUrl from '../../configuration';
 import apiResponseType from '../../types/api-response';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchValue } from '../../store/search';
 
 export default function SearchInput(props: {
   handleSearchFilter: (data: apiResponseType) => void;
 }) {
   const searchLocalStorageKey = 'searchValue';
-  const [value, setValue] = useState(localStorage.getItem(searchLocalStorageKey) || '');
+  const dispatch = useDispatch();
+  const value = useSelector((state) => state.searchReducer.value);
 
   useEffect(() => {
     return () => {
@@ -40,7 +43,7 @@ export default function SearchInput(props: {
     <input
       placeholder="Search..."
       onChange={(e) => {
-        setValue(e.target.value);
+        dispatch(setSearchValue(e.target.value));
       }}
       onKeyDown={handleKeyDown}
       defaultValue={value}

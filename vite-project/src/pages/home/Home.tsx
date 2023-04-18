@@ -1,18 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import SearchInput from '../../components/search-input/search-input';
 import TilesList from '../../components/tiles-list/tiles-list';
 import Spinner from '../../components/loading-spinner/index';
 import ErrorMessage from '../../components/error/index';
 import apiUrl from '../../configuration';
-import NodeType from '../../types/node';
 import apiResponseType from '../../types/api-response';
 import Modal from '../../components/modal/modal';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  setError,
+  removeError,
+  setNodes,
+  removeNodes,
+  setPending,
+  setResolved,
+} from '../../store/search';
 
 export default function Home() {
-  const [nodes, setNodes] = useState<NodeType[]>([]);
-  const [isPending, setIsPending] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState<NodeType | null>(null);
+  const dispatch = useDispatch();
+  const nodes = useSelector((state) => state.searchReducer.nodes);
+  const isPending = useSelector((state) => state.searchReducer.isPending);
+  const modalContent = useSelector((state) => state.searchReducer.modalContent);
+  const error = useSelector((state) => state.searchReducer.error);
 
   const isFetching = useRef(false);
 
@@ -28,30 +37,30 @@ export default function Home() {
           return res.json();
         })
         .then((data) => {
-          setNodes(data.results);
-          setIsPending(false);
-          setError(null);
+          dispatch(setNodes(data.results));
+          dispatch(setResolved());
+          dispatch(removeError());
         })
         .catch((err) => {
-          setError(err.message);
-          setIsPending(false);
+          dispatch(setError(err.message));
+          dispatch(setResolved());
         });
     }
   }, []);
 
   function handleSearchFilter(result: apiResponseType) {
     if (result.status === 'ok') {
-      setNodes(result.nodes || []);
-      setIsPending(false);
-      setError(null);
+      dispatch(setNodes(result.nodes) || []);
+      dispatch(setResolved());
+      dispatch(removeError());
     } else if (result.status === 'loading') {
-      setNodes([]);
-      setIsPending(true);
-      setError(null);
+      dispatch(removeNodes());
+      dispatch(setPending());
+      dispatch(removeError());
     } else {
-      setNodes([]);
-      setIsPending(false);
-      setError(result.errorMessage || 'Unexpected error occured.');
+      dispatch(removeNodes());
+      dispatch(setResolved());
+      dispatch(setError(result.errorMessage || 'Unexpected error occured.'));
     }
   }
 
@@ -60,8 +69,8 @@ export default function Home() {
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {error && <ErrorMessage message={error} />}
       {isPending && <Spinner />}
-      {nodes && <TilesList setIsModalOpen={setIsModalOpen} nodes={nodes} />}
-      {isModalOpen && <Modal handleClose={() => setIsModalOpen(null)} data={isModalOpen} />}
+      {nodes && <TilesList nodes={nodes} />}
+      {modalContent && <Modal data={modalContent} />}
     </div>
   );
 }
