@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 
 export default function Custom() {
   const nodesList = useSelector((state) => state.formReducer.cards);
-  console.log(nodesList);
 
   return (
     <>

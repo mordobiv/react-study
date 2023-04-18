@@ -7,15 +7,8 @@ import { setSearchValue } from '../../store/search';
 export default function SearchInput(props: {
   handleSearchFilter: (data: apiResponseType) => void;
 }) {
-  const searchLocalStorageKey = 'searchValue';
   const dispatch = useDispatch();
   const value = useSelector((state) => state.searchReducer.value);
-
-  useEffect(() => {
-    return () => {
-      localStorage.setItem(searchLocalStorageKey, value || '');
-    };
-  });
 
   function handleKeyDown(event: { key: string }) {
     if (event.key === 'Enter') {

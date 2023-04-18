@@ -22,11 +22,12 @@ export default function Home() {
   const isPending = useSelector((state) => state.searchReducer.isPending);
   const modalContent = useSelector((state) => state.searchReducer.modalContent);
   const error = useSelector((state) => state.searchReducer.error);
+  const value = useSelector((state) => state.searchReducer.value);
 
   const isFetching = useRef(false);
 
   useEffect(() => {
-    if (!isFetching.current) {
+    if (!isFetching.current && !value) {
       isFetching.current = true;
 
       fetch(`${apiUrl}/character/`)
