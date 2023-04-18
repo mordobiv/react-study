@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import apiUrl from '../../configuration';
 import apiResponseType from '../../types/api-response';
-import { useDispatch, useSelector } from 'react-redux';
 import { setSearchValue } from '../../store/search';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
 export default function SearchInput(props: {
   handleSearchFilter: (data: apiResponseType) => void;
 }) {
-  const dispatch = useDispatch();
-  const value = useSelector((state) => state.searchReducer.value);
+  const dispatch = useAppDispatch();
+  const value = useAppSelector((state) => state.searchReducer.value);
 
   function handleKeyDown(event: { key: string }) {
     if (event.key === 'Enter') {

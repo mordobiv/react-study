@@ -2,11 +2,11 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import ValidationError from '../validation-error/validation-error';
 import NodeType from '../../types/node';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../store/hooks';
 import { add } from '../../store/forms';
 
 export default function AddForm() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const {
     register,

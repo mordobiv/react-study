@@ -6,7 +6,7 @@ import ErrorMessage from '../../components/error/index';
 import apiUrl from '../../configuration';
 import apiResponseType from '../../types/api-response';
 import Modal from '../../components/modal/modal';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import {
   setError,
   removeError,
@@ -17,12 +17,12 @@ import {
 } from '../../store/search';
 
 export default function Home() {
-  const dispatch = useDispatch();
-  const nodes = useSelector((state) => state.searchReducer.nodes);
-  const isPending = useSelector((state) => state.searchReducer.isPending);
-  const modalContent = useSelector((state) => state.searchReducer.modalContent);
-  const error = useSelector((state) => state.searchReducer.error);
-  const value = useSelector((state) => state.searchReducer.value);
+  const dispatch = useAppDispatch();
+  const nodes = useAppSelector((state) => state.searchReducer.nodes);
+  const isPending = useAppSelector((state) => state.searchReducer.isPending);
+  const modalContent = useAppSelector((state) => state.searchReducer.modalContent);
+  const error = useAppSelector((state) => state.searchReducer.error);
+  const value = useAppSelector((state) => state.searchReducer.value);
 
   const isFetching = useRef(false);
 

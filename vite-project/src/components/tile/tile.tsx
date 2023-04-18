@@ -2,11 +2,11 @@ import React from 'react';
 import Img from '../img/img';
 import styles from './tile.module.scss';
 import NodeType from '../../types/node';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../store/hooks';
 import { openModal } from '../../store/search';
 
 export default function Tile({ node }: { node: NodeType }) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const mainIconPath = '/src/assets/img/';
 
   const date = new Date(node.created);

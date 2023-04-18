@@ -1,10 +1,10 @@
 import React from 'react';
 import AddForm from '../../components/add-card-form/Form';
 import TilesList from '../../components/tiles-list/tiles-list';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../store/hooks';
 
 export default function Custom() {
-  const nodesList = useSelector((state) => state.formReducer.cards);
+  const nodesList = useAppSelector((state) => state.formReducer.cards);
 
   return (
     <>
