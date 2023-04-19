@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1681122555147" clover="3.2.0">
+  <project timestamp="1681122555147" name="All files">
+    <metrics statements="79" coveredstatements="40" conditionals="56" coveredconditionals="25" methods="34" coveredmethods="20" elements="169" coveredelements="85" complexity="0" loc="79" ncloc="79" packages="17" files="22" classes="22"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/App.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="configuration.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/configuration.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+      <file name="main.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/main.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Layout">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Layout.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/Layout/Layout.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.add-card-form">
+      <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="2" coveredmethods="1"/>
+      <file name="Form.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/add-card-form/Form.tsx">
+        <metrics statements="10" coveredstatements="3" conditionals="18" coveredconditionals="5" methods="2" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.card-item">
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/card-item/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.error">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/error/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.img">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="img.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/img/img.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.loading-spinner">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/loading-spinner/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.modal">
+      <metrics statements="1" coveredstatements="1" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <file name="modal.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/modal/modal.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.search-input">
+      <metrics statements="15" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="4"/>
+      <file name="search-input.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/search-input/search-input.tsx">
+        <metrics statements="15" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="4"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="7" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.tile">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="tile.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/tile/tile.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.tiles-list">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="tiles-list.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/tiles-list/tiles-list.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.validation-error">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="validation-error.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/components/validation-error/validation-error.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.about">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="About.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/pages/about/About.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.custom">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="Custom.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/pages/custom/Custom.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.home">
+      <metrics statements="30" coveredstatements="10" conditionals="20" coveredconditionals="7" methods="7" coveredmethods="2"/>
+      <file name="Home.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/pages/home/Home.tsx">
+        <metrics statements="30" coveredstatements="10" conditionals="20" coveredconditionals="7" methods="7" coveredmethods="2"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="64" count="0" type="cond" truecount="1" falsecount="1"/>
+      </file>
+    </package>
+    <package name="src.pages.notFound">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NotFound.tsx" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/pages/notFound/NotFound.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="api-response.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/api-response.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="input.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/input.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="node.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/node.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="validation-error.ts" path="/Users/Dzmitry_Aniskovich/Documents/rs/react-study/vite-project/src/types/validation-error.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

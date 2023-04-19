@@ -1,0 +1,60 @@
+.tile {
+  border: 1px solid gray;
+  border-radius: 15px;
+  width: auto;
+  margin: 1%;
+
+  &__name {
+    font-size: 1.5rem;
+    color: aqua;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+
+    &__species {
+      color: antiquewhite;
+    }
+
+    &__date {
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+}
+
+.images {
+  display: flex;
+  align-items: center;
+
+  &_status {
+    margin: 20px;
+
+    &__img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &_photo {
+
+    &__img {
+      width: 150px;
+      height: 150px;
+      border-radius: 30px;
+    }
+  }
+
+  &_gender {
+    margin: 20px;
+
+    &__img {
+      width: 55px;
+      border: 1px solid gray;
+      border-radius: 15px;
+      padding-top: 2px;
+    }
+  }
+}
